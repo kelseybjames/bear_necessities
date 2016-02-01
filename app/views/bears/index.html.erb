@@ -1,0 +1,11 @@
+<ul id='bears'>
+  <% @bears.each do |bear| %>
+    <li>
+      <%= link_to bear.name, bear_path(bear) %>
+      <%= link_to "edit", edit_bear_path(bear) %>
+      <%= link_to "delete", bear_path(bear), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Create New Bear', new_bear_path %>

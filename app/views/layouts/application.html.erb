@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <h1>World of Bears</h1>
+  <% flash.each do |type, message| %>
+    <h2><%= type %>! <%= message %></h2>
+  <% end %>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
